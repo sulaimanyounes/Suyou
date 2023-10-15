@@ -57,6 +57,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SY_PLATFORM_WINDOWS;SY_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Suyou\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -71,6 +72,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SY_PLATFORM_WINDOWS;SY_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Suyou\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,12 +82,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Suyou\Log.h" />
     <ClInclude Include="src\Suyou.h" />
     <ClInclude Include="src\Suyou\Application.h" />
     <ClInclude Include="src\Suyou\Core.h" />
     <ClInclude Include="src\Suyou\EntryPoint.h" />
+    <ClInclude Include="src\Test.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Suyou\Log.cpp" />
     <ClCompile Include="src\Suyou\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
