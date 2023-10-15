@@ -7,5 +7,3 @@
 // ----------Entry Point-----------
 #include "Suyou/EntryPoint.h"
 //---------------------------------
-
-extern Suyou::Application* Suyou::CreateApplication();
