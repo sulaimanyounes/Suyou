@@ -4,6 +4,9 @@
     <Filter Include="Suyou">
       <UniqueIdentifier>{CA2B1F0E-3640-47BF-FFC1-EA1E6B9543F0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Suyou\Events">
+      <UniqueIdentifier>{6E70685B-5AD3-F7FF-0359-30B6EF9AC382}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Suyou.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\Suyou\EntryPoint.h">
       <Filter>Suyou</Filter>
     </ClInclude>
+    <ClInclude Include="src\Suyou\Events\ApplicationEvent.h">
+      <Filter>Suyou\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Suyou\Events\Event.h">
+      <Filter>Suyou\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Suyou\Events\KeyEvent.h">
+      <Filter>Suyou\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Suyou\Events\MouseEvent.h">
+      <Filter>Suyou\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Suyou\Log.h">
       <Filter>Suyou</Filter>
     </ClInclude>
-    <ClInclude Include="src\Suyou\Events\Event.h" />
-    <ClInclude Include="src\Suyou\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Suyou\Events\KeyEvent.h" />
-    <ClInclude Include="src\Suyou\Events\MouseEvent.h" />
+    <ClInclude Include="src\sypch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Suyou\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\Suyou\Log.cpp">
       <Filter>Suyou</Filter>
     </ClCompile>
+    <ClCompile Include="src\sypch.cpp" />
   </ItemGroup>
 </Project>

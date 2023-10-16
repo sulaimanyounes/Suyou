@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Suyou {
 
 	class SUYOU_API WindowResizeEvent : public Event

@@ -1,3 +1,4 @@
+#include "sypch.h"
 #include "Application.h"
 #include "Suyou/Events/ApplicationEvent.h"
 #include "Suyou/Log.h"

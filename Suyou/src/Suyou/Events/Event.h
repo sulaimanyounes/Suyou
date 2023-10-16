@@ -1,9 +1,7 @@
 #pragma once
 
+#include "sypch.h"
 #include "Suyou/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Suyou {
 
