@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Suyou">
+      <UniqueIdentifier>{CA2B1F0E-3640-47BF-FFC1-EA1E6B9543F0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Suyou.h" />
+    <ClInclude Include="src\Suyou\Application.h">
+      <Filter>Suyou</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Suyou\Core.h">
+      <Filter>Suyou</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Suyou\EntryPoint.h">
+      <Filter>Suyou</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Suyou\Log.h">
+      <Filter>Suyou</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Suyou\Events\Event.h" />
+    <ClInclude Include="src\Suyou\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Suyou\Events\KeyEvent.h" />
+    <ClInclude Include="src\Suyou\Events\MouseEvent.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Suyou\Application.cpp">
+      <Filter>Suyou</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Suyou\Log.cpp">
+      <Filter>Suyou</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

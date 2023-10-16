@@ -10,3 +10,5 @@
 	#error Suyou only supports Windows!
 #endif // SY_PLATFORM_WINDOWS
 
+#define BIT(x) (1 << x)
+
