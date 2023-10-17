@@ -1,7 +1,7 @@
 workspace "Suyou"
 	architecture "x86_64"
 
-	configurations
+	configurations 
 	{
 		"Debug",
 		"Release",
@@ -9,6 +9,12 @@ workspace "Suyou"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Suyou/vendor/GLFW/include"
+
+include "Suyou/vendor/GLFW"
 
 project "Suyou"
 	location "Suyou"
@@ -21,16 +27,23 @@ project "Suyou"
 	pchheader "sypch.h"
 	pchsource "Suyou/src/sypch.cpp"
 
-	files
+	files 
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
-	includedirs
+	includedirs 
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -38,13 +51,13 @@ project "Suyou"
 		staticruntime "On"
 		systemversion "latest"
 
-	defines
+	defines 
 	{
 		"SY_PLATFORM_WINDOWS",
 		"SY_BUILD_DLL"
 	}
 
-	postbuildcommands
+	postbuildcommands 
 	{
 		("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/sandbox")
 	}
@@ -70,19 +83,20 @@ project "Sandbox"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	files
+	files 
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
-	includedirs
+	includedirs 
 	{
 		"Suyou/vendor/spdlog/include",
 		"Suyou/src"
 	}
 
-	links {
+	links 
+	{
 		"Suyou"
 	}
 
@@ -91,7 +105,7 @@ project "Sandbox"
 		staticruntime "On"
 		systemversion "latest"
 
-	defines
+	defines 
 	{
 		"SY_PLATFORM_WINDOWS"
 	}

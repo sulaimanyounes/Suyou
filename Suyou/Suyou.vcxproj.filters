@@ -7,6 +7,12 @@
     <Filter Include="Suyou\Events">
       <UniqueIdentifier>{6E70685B-5AD3-F7FF-0359-30B6EF9AC382}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{f39a252c-6cbc-495a-b2d2-8734106737a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{de422b75-511d-478c-a4c1-56cd70cd914b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Suyou.h" />
@@ -34,7 +40,13 @@
     <ClInclude Include="src\Suyou\Log.h">
       <Filter>Suyou</Filter>
     </ClInclude>
+    <ClInclude Include="src\Suyou\Window.h">
+      <Filter>Suyou</Filter>
+    </ClInclude>
     <ClInclude Include="src\sypch.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Suyou\Application.cpp">
@@ -44,5 +56,8 @@
       <Filter>Suyou</Filter>
     </ClCompile>
     <ClCompile Include="src\sypch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
