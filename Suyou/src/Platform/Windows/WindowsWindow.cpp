@@ -32,7 +32,7 @@ namespace Suyou {
 		{
 			// TODO: glfwTerminate on system shutdown
 			int success = glfwInit();
-		SY_CORE_ASSERT(success, "Could not intialize GLFW!");
+			SY_CORE_ASSERT(success, "Could not intialize GLFW!");
 
 			s_GLFWInitialized = true;
 		}
